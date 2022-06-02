@@ -1,0 +1,9 @@
+apiVersion: installers.tmc.cloud.vmware.com/v1alpha1
+kind: AgentInstall
+metadata:
+  name: tmc-agent-installer-config
+  namespace: svc-tmc-c1061
+spec:
+  operation: INSTALL
+  registrationLink: "https://tsmentpublicsector.tmc.cloud.vmware.com/installer?id=888610b7cbc52e0b650a2d606be540f29dccd6078fa25f43a6285f377a455089&source=registration&type=tkgs"
+---

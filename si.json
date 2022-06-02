@@ -1,0 +1,84 @@
+{
+	"envSpec": {
+		"envType": "tkgs-wcp",
+		"vcenterDetails": {
+			"vcenterAddress": "vcenter.lab.bmath.nyc",
+			"vcenterSsoUser": "administrator@vsphere.local",
+			"vcenterSsoPasswordBase64": "Vk13YXJlMSE=",
+			"vcenterDatacenter": "Brooklyn",
+			"vcenterCluster": "vSphereWithTanzu",
+			"vcenterDatastore": "silver",
+			"contentLibraryName": "",
+			"aviOvaName": ""
+		},
+		"marketplaceSpec": {
+			"refreshToken": "5kk-Y7d-0HvsnYb0BYx-wwhsOtmNxGka1m_w4YMkScgUagFXsXn2QXvhr0YloEQH"
+		},
+		"saasEndpoints": {
+			"tmcDetails": {
+				"tmcAvailability": "false",
+				"tmcRefreshToken": "",
+				"tmcSupervisorClusterName": ""
+			}
+		},
+		"infraComponents": {
+			"dnsServersIp": "8.8.8.8",
+			"searchDomains": "lab.bmath.nyc",
+			"ntpServers": "pool.ntp.org"
+		}
+	},
+	"tkgsComponentSpec": {
+		"controlPlaneSize": "TINY",
+		"aviMgmtNetwork": {
+			"aviMgmtNetworkName": "_Management",
+			"aviMgmtNetworkGatewayCidr": "192.168.1.1/24",
+			"aviMgmtServiceIpStartRange": "192.168.1.111",
+			"aviMgmtServiceIpEndRange": "192.168.1.119"
+		},
+		"aviComponents": {
+			"aviPasswordBase64": "Vk13YXJlMSE=",
+			"aviBackupPassphraseBase64": "Vk13YXJlMSE=",
+			"enableAviHa": "false",
+			"aviController01Ip": "192.168.1.199",
+			"aviController01Fqdn": "lb.lab.bmath.nyc",
+			"aviController02Ip": "",
+			"aviController02Fqdn": "",
+			"aviController03Ip": "",
+			"aviController03Fqdn": "",
+			"aviClusterIp": "",
+			"aviClusterFqdn": "",
+			"aviSize": "essentials",
+			"aviCertPath": "",
+			"aviCertKeyPath": ""
+		},
+		"tkgsVipNetwork": {
+			"tkgsVipNetworkName": "TanzuDataOutsideLB",
+			"tkgsVipNetworkGatewayCidr": "192.168.3.1/24",
+			"tkgsVipIpStartRange": "192.168.3.111",
+			"tkgsVipIpEndRange": "192.168.3.119"
+		},
+		"tkgsMgmtNetworkSpec": {
+			"tkgsMgmtNetworkName": "_Management",
+			"tkgsMgmtNetworkGatewayCidr": "192.168.1.1/24",
+			"tkgsMgmtNetworkStartingIp": "192.168.1.121",
+			"tkgsMgmtNetworkDnsServers": "8.8.8.8",
+			"tkgsMgmtNetworkSearchDomains": "lab.bmath.nyc",
+			"tkgsMgmtNetworkNtpServers": "pool.ntp.org"
+		},
+		"tkgsStoragePolicySpec": {
+			"masterStoragePolicy": "Management Storage policy - Thin",
+			"ephemeralStoragePolicy": "Management Storage policy - Thin",
+			"imageStoragePolicy": "Management Storage policy - Thin"
+		},
+		"tkgsPrimaryWorkloadNetwork": {
+			"tkgsPrimaryWorkloadPortgroupName": "TanzuWorkload",
+			"tkgsPrimaryWorkloadNetworkName": "workload",
+			"tkgsPrimaryWorkloadNetworkGatewayCidr": "10.2.0.1/24",
+			"tkgsPrimaryWorkloadNetworkStartRange": "10.2.0.10",
+			"tkgsPrimaryWorkloadNetworkEndRange": "10.2.0.199",
+			"tkgsWorkloadDnsServers": "8.8.8.8",
+			"tkgsWorkloadNtpServers": "pool.ntp.org",
+			"tkgsWorkloadServiceCidr": "10.96.0.0/22"
+		}
+	}
+}
